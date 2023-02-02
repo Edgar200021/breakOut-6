@@ -1,160 +1,137 @@
 *{
 	box-sizing: border-box;
-	margin:0
+	margin: 0;
 }
-
-button,input{
-	border: none;
-	background: none;
-	outline: none;
-}
-
 
 body{
 	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	background-image:url('bg.jpg');
+	font-family:monospace;
+  background-image: url('./bg.jpg');
+	background-repeat:no-repeat;
 	background-size: cover;
-	background-position:center;
-	background-repeat: no-repeat;
-	color: #fff;
-	font-family: sans-serif;
+	background-position: center;
+}
+
+
+
+input,button{
+  background: none;
+	outline: none;
+	border: none;
 }
 
 .container{
-	background-color: black;
 	max-width: 700px;
-	width: 100%;
-	border-radius: 20px;
-	margin: 50px 0;
-	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	margin: 0 auto;
+	background-color: yellow;
+	margin-top: 70px;
+	box-shadow: yellow 0px 22px 70px 4px;
+	min-height: 600px;
+	border-radius: 30px;
 }
 
-.header{
-  padding: 20px 40px;
-	width: 100%;
-	margin-bottom:0px;
+.header__inner{
+	padding: 30px 20px;
+	margin-bottom: 20px;
 }
 
-#task__form{
+.main__title{
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.task__form{
 	display: flex;
 	gap: 20px;
 }
 
-#task__form--input{
-	flex: 1 1 0;
-	padding: 10px 20px;
+.task__input{
+	background-color: white;
+	color: black;
+	flex: 1 0 0;
+	padding: 15px;
 	border-radius: 20px;
-	background-color: #e5de00;
-	color: black;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.task__submit{
 	font-size: 20px;
-}
-
-#task__form--input::placeholder{
-	color: black;
-}
-
-/* #e47200 */
-
-.task__title{
-	color:#e5de00;
-	font-size: 30px;
-	text-transform: capitalize;
-	margin-bottom: 15px;
-}
-
-#task__form--submit{
-	background-color: #e5de00;
-	border-radius: 20px;
-	font-size: 20px;
-	color: black;
 	cursor: pointer;
-	letter-spacing: 1px;
-	padding: 10px;
-	transition: all 0.3s;
+	background-color: black;
+	border-radius: 20px;
+	color: white;
+	letter-spacing: 2px;
+	transition:0.3s all;
 }
 
-#task__form--submit:hover{
-	box-shadow: 0 0.7em 0.5em -0.4em #e5de00;
+.task__submit:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em black;
   transform: translateY(-0.25em);
 }
 
-main{
-	flex: 1 1 0;
-	padding: 32px 16px;
-	max-width: 650px;
-	width: 100%;
-	margin: 0 auto;
+.tasks{
+	padding: 30px 20px;
 }
 
-
-.task__list--inner{
+.tasks__inner{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #111827;
-	border-radius: 15px;
-	color:white;
-	margin-bottom: 15px;
-	padding:10px;
+	background-color: black;
+	padding: 10px 15px;
+	border-radius: 40px;
+	margin-bottom: 20px;
 }
 
-.task__list--title{
-	font-weight: 300;
-	font-size: 25px;
-	color: #e5de00;
-	margin-bottom: 15px;
+.tasks__content{
+	flex: 1 0 0;
 }
 
-.task__list--content{
-	flex:1 1 0;
-}
-
-.task__list--action{
+.task__actions{
 	display: flex;
-	gap: 10px;
-}
-
-.edit{
- background-image: linear-gradient(to right,#EC4899,#8B5Cf6);
- padding: 10px 20px;
- border-radius: 20px;
- text-transform: uppercase;
- cursor: pointer;
- color: white;
- transition: all 0.3s;
-}
-
-.edit:hover{
-	transform: translateY(-0.25em);
-	box-shadow: 0 0.7em 0.5em -0.4em #EC4899;
-}
-
-.del{
-	cursor: pointer;
-	color: white;
-	text-transform: uppercase;
-	padding: 10px 20px;
-	transition: 0.3s;
-	background-color: crimson;
-	border-radius: 20px;
-}
-
-.del:hover{
-	box-shadow: 0 0.7em 0.5em -0.4em crimson;
-  transform: translateY(-0.25em);
+	gap: 15px;
 }
 
 .text{
 	display: block;
 	width: 100%;
-	padding:10px 20px;
- color: white;
- font-size: 18px;
- transition: all 0.3s;
+	font-size: 25px;
+	color: white;
+	padding: 0 15px;
+	transition: color 0.3s;
 }
 
 .text:not(:read-only){
-	color: #EC4899;
+	color: yellow;
+}
+
+.button{
+	padding: 10px 25px;
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 30px;
+	transition: all 0.3s;
+	text-transform: uppercase;
+}
+
+.task__edit{
+	background-color: yellow;
+}
+
+.task__edit:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em yellow;
+  transform: translateY(-0.25em);
+}
+
+.task__del{
+	background-color: crimson;
+}
+
+.task__del:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em crimson;
+  transform: translateY(-0.25em);
 }
