@@ -1,0 +1,160 @@
+*{
+	box-sizing: border-box;
+	margin:0
+}
+
+button,input{
+	border: none;
+	background: none;
+	outline: none;
+}
+
+
+body{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	background-image:url('bg.jpg');
+	background-size: cover;
+	background-position:center;
+	background-repeat: no-repeat;
+	color: #fff;
+	font-family: sans-serif;
+}
+
+.container{
+	background-color: black;
+	max-width: 700px;
+	width: 100%;
+	border-radius: 20px;
+	margin: 50px 0;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.header{
+  padding: 20px 40px;
+	width: 100%;
+	margin-bottom:0px;
+}
+
+#task__form{
+	display: flex;
+	gap: 20px;
+}
+
+#task__form--input{
+	flex: 1 1 0;
+	padding: 10px 20px;
+	border-radius: 20px;
+	background-color: #e5de00;
+	color: black;
+	font-size: 20px;
+}
+
+#task__form--input::placeholder{
+	color: black;
+}
+
+/* #e47200 */
+
+.task__title{
+	color:#e5de00;
+	font-size: 30px;
+	text-transform: capitalize;
+	margin-bottom: 15px;
+}
+
+#task__form--submit{
+	background-color: #e5de00;
+	border-radius: 20px;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	letter-spacing: 1px;
+	padding: 10px;
+	transition: all 0.3s;
+}
+
+#task__form--submit:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em #e5de00;
+  transform: translateY(-0.25em);
+}
+
+main{
+	flex: 1 1 0;
+	padding: 32px 16px;
+	max-width: 650px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+.task__list--inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #111827;
+	border-radius: 15px;
+	color:white;
+	margin-bottom: 15px;
+	padding:10px;
+}
+
+.task__list--title{
+	font-weight: 300;
+	font-size: 25px;
+	color: #e5de00;
+	margin-bottom: 15px;
+}
+
+.task__list--content{
+	flex:1 1 0;
+}
+
+.task__list--action{
+	display: flex;
+	gap: 10px;
+}
+
+.edit{
+ background-image: linear-gradient(to right,#EC4899,#8B5Cf6);
+ padding: 10px 20px;
+ border-radius: 20px;
+ text-transform: uppercase;
+ cursor: pointer;
+ color: white;
+ transition: all 0.3s;
+}
+
+.edit:hover{
+	transform: translateY(-0.25em);
+	box-shadow: 0 0.7em 0.5em -0.4em #EC4899;
+}
+
+.del{
+	cursor: pointer;
+	color: white;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	transition: 0.3s;
+	background-color: crimson;
+	border-radius: 20px;
+}
+
+.del:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em crimson;
+  transform: translateY(-0.25em);
+}
+
+.text{
+	display: block;
+	width: 100%;
+	padding:10px 20px;
+ color: white;
+ font-size: 18px;
+ transition: all 0.3s;
+}
+
+.text:not(:read-only){
+	color: #EC4899;
+}
