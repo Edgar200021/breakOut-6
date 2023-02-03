@@ -2,14 +2,23 @@ const form = document.querySelector('.task__form')
 const input = document.querySelector('.task__input')
 const taskList = document.querySelector('.tasks')
 
-form.addEventListener('submit', (e) => {
-	e.preventDefault()
 
+
+form.addEventListener('submit', event => {
+	event.preventDefault()
 	const task = input.value
+
+	const deleteAll = document.querySelector('.delete__all')
+	deleteAll.addEventListener('click',() => {
+		taskContent.parentElement.remove()
+	})
+	
+
 	if(!task) {
 		alert('Enter the task')
+		return
 	}
-
+  
 	const taskItem = document.createElement('div')
 	taskItem.classList.add('tasks__inner')
 
@@ -28,7 +37,6 @@ form.addEventListener('submit', (e) => {
 
 	const taskActions = document.createElement('div')
 	taskActions.classList.add('task__actions')
-
 
 	const taskEdit = document.createElement('button')
 	taskEdit.classList.add('task__edit')
@@ -63,4 +71,8 @@ form.addEventListener('submit', (e) => {
 	})
 
 
+
+
+	input.value = ''
 })
+
