@@ -29,21 +29,21 @@ btn()
     // })
 
 
-    edit.addEventListener('click',()=> x('y'));
-    edit.addEventListener('click',()=> x('z'));
-    function x(abc) {
-        if (abc=='y') {
+    edit.addEventListener('click',()=> {
+    
+    
+        if (edit.textContent =='Edit') {
             text1.readOnly = !text1.readOnly
             edit.textContent ="Add"
             edit.style.backgroundColor="green"
         }
-        else if (abc==!'z'){
+        else{
             text1.readOnly = !text1.readOnly
             edit.textContent ="Edit"
+            edit.style.backgroundColor="aqua"
         }
         
-    }
-
+    })
 
     buttonDelit.textContent="Delit"
     edit.textContent="Edit"
