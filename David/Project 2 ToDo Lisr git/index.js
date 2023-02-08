@@ -25,12 +25,13 @@ function makelist() {
   changetext.style.display = "inline-block";
   changetext.addEventListener("click", () => changeText(textexample));
   let textexamplediv = document.createElement("div");
+ 
   textexamplediv.style.marginBottom = "10px";
   textexamplediv.appendChild(textexample);
   textexamplediv.appendChild(deletetext);
   textexamplediv.appendChild(changetext);
   main.appendChild(textexamplediv);
-
+  textexamplediv.classList = "textexamplediv"
 }
 
 deletealllists.addEventListener("click",() =>deletealltexts());
@@ -46,3 +47,6 @@ function deleteText(textexample) {
 function changeText(textexample) {
   textexample.readOnly = !textexample.readOnly;
 }
+
+
+

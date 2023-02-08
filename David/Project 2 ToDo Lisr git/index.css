@@ -1,0 +1,58 @@
+
+#submitinput {
+   background-color:rgb(0, 170, 255);
+   color: white;
+   font-size: 20px;
+   width: 150px;
+}
+
+#main{
+   background-color: lightgray;
+   width:630px;
+   margin-top: 20px;  
+}
+
+.deletetext{
+   background-color:#F44336 ;
+   width: 140px; 
+   color:white;
+   height: 30px;
+   font-size: 20px;
+}
+
+body{
+   background-image: url(./todolist\ photo.webp);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: calc(100vh - 110px);
+   background-position: center;
+}
+
+.textexample{
+   width: 300px;
+   height: 30px;
+}
+
+#all{
+   margin-top: 100px;
+   margin-left: 700px;
+}
+
+.deletealllists{
+   background-color: red;
+   color: white;
+   font-size: 20px;
+   width: 150px;
+}
+
+.changetext{
+   width: 140px; 
+   color:white;
+   height: 30px;
+   font-size: 20px;
+   background-color: gray;}
+
+   #textinput{
+      width: 300px;
+      height: 30px;
+   }
