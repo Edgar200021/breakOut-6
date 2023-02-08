@@ -1,0 +1,166 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body{
+	min-height: 100vh;
+	font-family:monospace;
+  background-image: url('./bg.jpg');
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+input,button{
+  background: none;
+	outline: none;
+	border: none;
+}
+
+.container{
+	max-width: 700px;
+	margin: 0 auto;
+	background-color: yellow;
+	margin-top: 70px;
+	box-shadow: yellow 0px 22px 70px 4px;
+	min-height: 600px;
+	border-radius: 30px;
+}
+
+.header__inner{
+	padding: 30px 20px 0px;
+	
+}
+
+.form__inner{
+	display: flex;
+}
+
+.delete__all{
+	font-size: 20px;
+	cursor: pointer;
+	background-color: crimson;
+	border-radius: 20px;
+	color: white;
+	letter-spacing: 2px;
+	transition:0.3s all;
+	margin-left: 20px;
+}
+
+.delete__all:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em crimson;
+  transform: translateY(-0.25em);
+}
+
+
+.main__title{
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: black;
+}
+
+.task__form{
+	display: flex;
+	gap: 20px;
+	flex:1 0 0;
+}
+
+.task__input{
+	background-color: white;
+	color: black;
+	flex: 1 0 0;
+	padding: 15px;
+	border-radius: 20px;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.task__submit{
+	font-size: 20px;
+	cursor: pointer;
+	background-color: black;
+	border-radius: 20px;
+	color: white;
+	letter-spacing: 2px;
+	transition:0.3s all;
+}
+
+.task__submit:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em black;
+  transform: translateY(-0.25em);
+}
+
+.tasks{
+	padding: 30px 20px;
+}
+
+.tasks__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+	padding: 10px 15px;
+	border-radius: 40px;
+	margin-bottom: 10px;
+}
+
+.tasks__title{
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.tasks__content{
+	flex: 1 0 0;
+}
+
+.task__actions{
+	display: flex;
+	gap: 15px;
+}
+
+.text{
+	display: block;
+	width: 100%;
+	font-size: 25px;
+	color: white;
+	padding: 0 15px;
+	transition: color 0.3s;
+}
+
+.text:not(:read-only){
+	color: yellow;
+}
+
+.button{
+	padding: 10px 25px;
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 30px;
+	transition: all 0.3s;
+	text-transform: uppercase;
+}
+
+.task__edit{
+	background-color: yellow;
+}
+
+.task__edit:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em yellow;
+  transform: translateY(-0.25em);
+}
+
+.task__del{
+	background-color: crimson;
+}
+
+.task__del:hover{
+	box-shadow: 0 0.7em 0.5em -0.4em crimson;
+  transform: translateY(-0.25em);
+}
